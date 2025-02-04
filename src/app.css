@@ -1,3 +1,35 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+    .main-output {
+      text-shadow: rgb(234 179 8) 0px 0px 2px;
+      @apply font-normal text-yellow-500;
+    }
+  
+    .primary-output {
+      text-shadow: rgb(167, 46, 38) 0px 0px 5px;
+      @apply font-extrabold text-red-500;
+    }
+  
+    .secondary-output {
+      text-shadow: rgb(59 130 246) 0px 0px 5px;
+      @apply font-medium text-blue-500;
+    }
+  
+    .main-text {
+      text-shadow: rgb(34 197 94) 0px 0px 1.8px;
+      @apply font-normal text-green-500
+    }
+  
+    .secondary-text {
+      text-shadow: rgb(139 92 246) 0px 0px 3px;
+      @apply font-light text-violet-500
+    }
+  }
+  
+  :root {
+    --cursor-color: #fff;
+    font-size: 16px;
+  }
