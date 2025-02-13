@@ -2,6 +2,8 @@
   import { executeCommand, type CommandOutput } from "$lib/commands";
   import { cascade } from "svelte-typewriter";
   import { onMount } from "svelte";
+  import {TypeWriter} from "svelte-typewrite";
+  import MenuBar from './MenuBar.svelte';
 
   let inputRef: HTMLInputElement | null = null;
   let command = "";
@@ -9,7 +11,7 @@
       {
           command: "",
           response:
-              `<span class='secondary-text'>Welcome to my portfolio. Enter 'help' to begin.<br><br>`,
+              `<span class="secondary-text">Welcome to my portfolio. Enter 'help' to begin. <br><br>`,
       },
   ];
   let history: string[] = [];
@@ -65,7 +67,6 @@
 
   const formatResponse = (response: string) => response.split("\n");
 </script>
-
 <!-- Terminal container -->
 <div class="flex flex-col justify-start items-center bg-gray-950 font-mono text-green-500 min-h-screen w-full p-4 sm:p-6">
   <div class="bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg rounded-xl w-full max-w-3xl mx-auto flex flex-col overflow-hidden">
@@ -79,11 +80,11 @@
 
       <!-- Terminal output -->
       <div class="bg-zinc-900 text-green-500 font-mono text-lg flex-1 p-4 overflow-y-auto h-[500px] min-h-[50vh]">
-          {#each output as line}
+        {#each output as line}
               <div>
                   {#if line.command}
-                      {#if line.command === "sudo"}
-                          <span class="mr-2 main-text">sudo@portfolio:~$</span>{line.command}
+                      {#if isSudoMode === true}
+                          <span class="mr-2 main-text">root@portfolio:~$</span>{line.command}
                       {:else}
                           <span class="mr-2 main-text">guest@portfolio:~$</span>{line.command}
                       {/if}
@@ -98,15 +99,16 @@
 
           <!-- Input field with scaling -->
           <div class="flex items-center">
-              {#if command === "sudo"}
-                  <span class="mr-2 main-text">sudo@portfolio:~$</span>
-              {:else}
+              
+                  {#if command === "sudo" || isSudoMode === true}
+                  <span class="mr-2 main-text">root@portfolio:~$</span>
+                    {:else}
                   <span class="mr-2 main-text">guest@portfolio:~$</span>
-              {/if}
+                  {/if}
               <span class="main-input">{command}</span>
               <b class="cursor">█</b>
               <input
-                  class="absolute left-[-9999px]"
+                  class="absolute left-[-9999px] w-auto"
                   type="text"
                   bind:value={command}
                   bind:this={inputRef}
@@ -115,6 +117,7 @@
           </div>
       </div>
   </div>
+  <MenuBar />
 
   <style>
       .cursor {

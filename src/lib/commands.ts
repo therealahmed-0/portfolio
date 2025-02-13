@@ -9,19 +9,12 @@ interface Command {
   execute: () => CommandOutput | CommandOutput[];
 }
 
-export let userIp: string = 'unknown'; // Default value in case IP fetching fails
+export let userIp: string = "";
 
 export const fetchUserIp = async () => {
-  try {
-      const response = await fetch('https://myip.wtf/text');
-      userIp = (await response.text()).trim();
-  } catch (error) {
-      console.error("Failed to fetch IP:", error);
-  }
-};
-
-/* IP detection disabled due to incompatibility with Vercel */
-// await fetchUserIp();
+    const response = await fetch('https://myip.wtf/text');
+    userIp = (await response.text()).trim();
+}
 
 export const commands: Command[] = [
   {
@@ -50,7 +43,7 @@ export const commands: Command[] = [
       execute: () => {
           return {
               command: 'whoami',
-              response: `<br><span class="main-output">guest@${userIp || 'unknown'}</span>`,
+              response: `<br><span class="main-output">guest@${userIp}</span>`,
           };
       },
   },
