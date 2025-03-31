@@ -13,7 +13,7 @@
                 <span class="absolute left-0 bottom-0 w-full h-[2px] bg-red-500 scale-x-0 transition-transform duration-400 ease-in-out group-hover:scale-x-100"></span>
             </a>
             <a href="">
-                <img src="src/lib/assets/therealahmedLogo.png" alt="therealahmedLogo" class="w-[70px] h-[70px] md:w-[105px] md:h-[105px] lg:w-[140px] lg:h-[140px]">
+                <img src="src/lib/therealahmedLogo.png" alt="therealahmedLogo" class="w-[70px] h-[70px] md:w-[105px] md:h-[105px] lg:w-[140px] lg:h-[140px]">
             </a>
             <a href="" class="group relative  transition-all duration-400 ease-in-out hover:text-white hover:bg-gray-700 hover:rounded">
                 Projects
