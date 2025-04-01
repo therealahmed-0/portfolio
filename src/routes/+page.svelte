@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navbar from "../lib/Navbar.svelte";
   import { TypeWriter } from 'svelte-typewrite';
+  import { autoHash } from '$lib/autoHash';
 
   let quotes = [
       "The world doesn't care about your excuses. All that matters is the result.",
@@ -29,11 +30,11 @@
 </script>
 
 <div class="fixed top-0 left-0 w-full z-50">
-  <Navbar />
+  <Navbar fill={"#ff0000"}/>
 </div>
 
 <main>
-  <div class="flex flex-col h-screen justify-center items-center text-center">
+  <div use:autoHash class="flex flex-col h-screen justify-center items-center text-center">
       <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
           <TypeWriter 
               texts={[`"${selectedQuote}"`]} 
@@ -47,13 +48,13 @@
       </div>
   </div>
 
-  <section class="flex flex-col items-center justify-center h-screen pt-24 md:pt-32 lg:pt-36 px-6 md:px-12 text-center">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-slate-950 text-transparent bg-clip-text">About Me</h1>
+  <section id="About"  use:autoHash class="flex flex-col items-center justify-center h-screen pt-20 md:pt-28 lg:pt-34 px-6 md:px-12 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-zinc-700 text-transparent bg-clip-text">About Me</h1>
     <p class="text-gray-300 text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mt-4 md:mt-6">
         Hey, I'm <span class="text-red-400 font-semibold">Ahmed</span>, a passionate 
         <span class="text-blue-400">computer science enthusiast</span> specializing in 
         <span class="text-green-400">full-stack development, system design, and problem-solving</span>. 
-        Currently, I'm exploring <span class="text-yellow-400">many fields in the world of software and physical engineering</span> to build scalable, real-world solutions.
+        Currently, I'm exploring <span class="text-yellow-400">physical engineering and low-level programming</span> to build scalable, real-world solutions.
     </p>
     <p class="text-gray-300 text-lg md:text-xl lg:text-2xl max-w-3xl mt-4">
         Beyond coding, I'm dedicated to <span class="text-purple-400">mathematics and physics</span>, pushing my limits through academic challenges. 
@@ -67,7 +68,7 @@
   <br>
   <br>
   <br>
-  <div class="flex justify-center items-center text-3xl md:text-4xl lg:text-5xl bg-gradient-to-b from-red-500 to-red-950 bg-clip-text text-transparent font-semibold">
+  <div id="TechStack" class="flex justify-center items-center text-3xl md:text-4xl lg:text-5xl bg-gradient-to-b from-red-500 to-red-950 bg-clip-text text-transparent font-semibold">
     Tech Stack
   </div>
   <div class="w-full h-screen md:h-max lg:h-max bg-gray-950 text-white flex flex-col md:flex-row justify-center items-center gap-8 p-4">
@@ -78,8 +79,8 @@
           <path d="M40.9 103.9c-8.9 2.3-18.2-1.2-23.4-8.7-3.2-4.4-4.4-9.9-3.5-15.3 0.2-0.9 0.4-1.7 0.6-2.6l0.5-1.6 1.4 1c3.3 2.4 6.9 4.2 10.8 5.4l1 0.3-0.1 1c-0.1 1.4 0.3 2.9 1.1 4.1 1.6 2.3 4.4 3.4 7.1 2.7 0.6-0.2 1.2-0.4 1.7-0.7L65.5 72c1.4-0.9 2.3-2.2 2.6-3.8 0.3-1.6-0.1-3.3-1-4.6-1.6-2.3-4.4-3.3-7.1-2.6-0.6 0.2-1.2 0.4-1.7 0.7l-10.5 6.7c-1.7 1.1-3.6 1.9-5.6 2.4-8.9 2.3-18.2-1.2-23.4-8.7-3.1-4.4-4.4-9.9-3.4-15.3 0.9-5.2 4.1-9.9 8.6-12.7l27.5-17.5c1.7-1.1 3.6-1.9 5.6-2.5 8.9-2.3 18.2 1.2 23.4 8.7 3.2 4.4 4.4 9.9 3.5 15.3-0.2 0.9-0.4 1.7-0.7 2.6l-0.5 1.6-1.4-1c-3.3-2.4-6.9-4.2-10.8-5.4l-1-0.3 0.1-1c0.1-1.4-0.3-2.9-1.1-4.1-1.6-2.3-4.4-3.3-7.1-2.6-0.6 0.2-1.2 0.4-1.7 0.7L32.4 46.1c-1.4 0.9-2.3 2.2-2.6 3.8s0.1 3.3 1 4.6c1.6 2.3 4.4 3.3 7.1 2.6 0.6-0.2 1.2-0.4 1.7-0.7l10.5-6.7c1.7-1.1 3.6-1.9 5.6-2.5 8.9-2.3 18.2 1.2 23.4 8.7 3.2 4.4 4.4 9.9 3.5 15.3-0.9 5.2-4.1 9.9-8.6 12.7l-27.5 17.5c-1.7 1.1-3.6 1.9-5.6 2.5" fill="#ffffff"/>
         </svg>
       </a>
-      <span>
-        svelte
+      <span class="text-center font-semibold text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-[#ff3e00] to-orange-900 bg-clip-text text-transparent">
+        SvelteKit
       </span>
     </div>
     <div class="flex flex-col justify-center items-center text-center p-4 w-full">
@@ -91,7 +92,7 @@
           <path d="M308.231 20.8584C266 54.6908 232.652 99.302 212.475 150.693C200.924 180.129 193.665 211.748 191.546 244.893C265.696 264.023 319.272 332.579 316.489 412.273C315.431 442.57 306.317 470.663 291.355 494.677C319.595 520.804 352.686 541.77 389.223 556.124C462.56 522.224 514.593 449.278 517.606 362.997C519.558 307.096 498.08 257.273 467.731 215.219C435.68 170.742 308.231 20.8584 308.231 20.8584Z" fill="#DD2C00"/>
         </svg>
       </a>
-      <span>
+      <span class="text-center font-semibold text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-[#FF9100] via-[#FFC400] via-[#FF9100] to-[#DD2C00] bg-clip-text text-transparent">
         Firebase
       </span>
     </div>
@@ -101,10 +102,44 @@
           <path d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z" fill="#38B2AC"/>
         </svg>
       </a>
-      <span>
-        tailwindcss
+      <span class="text-center font-semibold text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-[#38B2AC] to-cyan-700 bg-clip-text text-transparent">
+        TailwindCSS
       </span>
     </div>
   </div>
-  <div class="h-screen"></div>
+  <div use:autoHash class="h-screen flex flex-col pt-22 md:pt-30 lg:pt-36 px-6 md:px-12 text-center">
+    <div class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-slate-800 text-transparent bg-clip-text">
+        Projects
+    </div>
+    <section id="Projects" class="flex flex-col md:flex-row justify-center items-center pt-12 md:pt-20 lg:pt-28 text-white gap-6">
+        <a href="/RevisionBot" class="w-full md:w-1/3">
+            <div class="group p-6 border border-white/20 rounded-md hover:bg-white/10 ease-in-out duration-300">
+                <span class="group font-semibold text-xl md:text-2xl lg:text-4xl">
+                    Revision Bot 
+                    <span class="inline-block transition-transform group-hover:translate-x-3">-></span>
+                </span>
+                <p class="mt-3 text-sm md:text-base">
+                    An effective solution to online quizzing using the WWebJS library, allowing WhatsApp messages with questions to be sent for effective revision anytime, anywhere.
+                </p>
+            </div>
+        </a>
+        <a href="#bottleOS" class="w-full md:w-1/3">
+            <div id="bottleOS" class="group p-6 border border-white/10 rounded-md bg-white/10 text-slate-400">
+                <span class="group font-semibold text-xl md:text-2xl lg:text-4xl">
+                    Bottle OS 
+                    <span class="inline-block">-></span>
+                </span>
+                <p class="mt-3 text-sm md:text-base">
+                    A compact operating system for a smart water bottle with an integrated display, featuring real-time temperature monitoring and AI-powered interactions. Coming Soon.
+                </p>
+            </div>
+          </a>
+        </section>
+        <br>
+        <br>
+        <section>
+          <span>
+            todo: footer
+          </span>
+        </section>
 </main>
