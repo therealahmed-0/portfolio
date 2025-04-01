@@ -15,7 +15,8 @@
       "The only thing holding you back is your own mindset.",
       "You must put in the effort to live the life you want.",
       "Success isn't about what you accomplish, it's about what you inspire others to do.",
-      "Fear is the enemy of success; conquer it and you will conquer anything."
+      "Fear is the enemy of success; conquer it and you will conquer anything.",
+      "The struggle you are enduring today is developing the strength you need for tomorrow."
   ];
 
   let selectedQuote = quotes[Math.floor(Math.random() * quotes.length)];
