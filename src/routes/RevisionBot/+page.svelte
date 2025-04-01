@@ -1,5 +1,5 @@
 <script>
-    import Navbar from "/workspaces/portfolio/src/lib/Navbar.svelte";
+    import Navbar "$lib/Navbar.svelte";
 </script>
 <Navbar fill={"#008000"}/>
 <span class="text-white">
