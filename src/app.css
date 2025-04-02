@@ -4,22 +4,22 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('static/fonts/Inter-Regular.ttf') format('truetype');
+    src: url('/fonts/Inter_24pt-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Inter';
-    src: url('static/fonts/Inter-Semibold.ttf') format('truetype');
+    src: url('/fonts/Inter_24pt-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Inter';
-    src: url('/static/fonts/Inter_24pt-Regular.ttf') format('truetype');
-    font-weight: 700;
+    src: url('/fonts/Inter_24pt-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
   }
   

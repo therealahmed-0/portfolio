@@ -290,7 +290,7 @@
             <div class="group p-6 border border-white/20 rounded-md hover:bg-white/10 ease-in-out duration-300">
                 <span class="group font-semibold text-xl md:text-2xl lg:text-4xl">
                     Revision Bot 
-                    <span class="inline-block transition-transform group-hover:translate-x-3">-></span>
+                    <span class="inline-block transition-transform group-hover:translate-x-3">→</span>
                 </span>
                 <p class="mt-3 text-sm md:text-base">
                     An effective solution to online quizzing using the WWebJS library, allowing WhatsApp messages with questions to be sent for effective revision anytime, anywhere.
@@ -301,7 +301,7 @@
             <div id="bottleOS" class="group p-6 border border-white/10 rounded-md bg-white/10 text-slate-400">
                 <span class="group font-semibold text-xl md:text-2xl lg:text-4xl">
                     Bottle OS 
-                    <span class="inline-block">-></span>
+                    <span class="inline-block">→</span>
                 </span>
                 <p class="mt-3 text-sm md:text-base">
                     A compact operating system for a smart water bottle with an integrated display, featuring real-time temperature monitoring and AI-powered interactions. Coming Soon.
