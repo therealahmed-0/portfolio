@@ -32,16 +32,18 @@
 </script>
 <head>
   <style>
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.star{
+.star {
     position: absolute;
-    transform: rotateZ(45deg);
-    top: -50px;
+    transform: rotateZ(45deg) translateX(-50%);
+    top: 0;
+    right: 0;
+    left: initial;
 }
 
 .span {
@@ -55,82 +57,83 @@
 
 .span::before {
     content: "";
+    background: linear-gradient(90deg,#fff,#0000);
+    width: 300px;
+    height: 1px;
     position: absolute;
-    bottom: -1px;
-    left: 0px;
-    border-radius: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 6px #fff;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.star:nth-child(2)  {
+.star:nth-child(2) {
     right: 100px;
 }
-.star:nth-child(2) span{
+.star:nth-child(2) span {
     animation-delay: 1s;
 }
 
-.star:nth-child(3)  {
+.star:nth-child(3) {
     right: 450px;
 }
-.star:nth-child(3) span{
+.star:nth-child(3) span {
     animation-delay: 2s;
 }
 
-.star:nth-child(4)  {
+.star:nth-child(4) {
     right: -150px;
 }
-.star:nth-child(4) span{
+.star:nth-child(4) span {
     animation-delay: 3s;
 }
 
-.star:nth-child(5)  {
+.star:nth-child(5) {
     right: -350px;
 }
-.star:nth-child(5) span{
+.star:nth-child(5) span {
     animation-delay: 2s;
 }
 
-.star:nth-child(6)  {
+.star:nth-child(6) {
     right: 550px;
 }
-.star:nth-child(6) span{
+.star:nth-child(6) span {
     animation-delay: 4s;
 }
 
-.star:nth-child(7)  {
+.star:nth-child(7) {
     right: 50px;
 }
-.star:nth-child(7) span{
+.star:nth-child(7) span {
     animation-delay: 4s;
 }
 
-.star:nth-child(8)  {
+.star:nth-child(8) {
     right: 750px;
 }
-.star:nth-child(8) span{
+.star:nth-child(8) span {
     animation-delay: 5s;
 }
 
-.star:nth-child(9)  {
+.star:nth-child(9) {
     right: 250px;
 }
-.star:nth-child(9) span{
+.star:nth-child(9) span {
     animation-delay: 4s;
 }
 
-.star:nth-child(10)  {
+.star:nth-child(10) {
     right: 100px;
 }
-.star:nth-child(10) span{
+.star:nth-child(10) span {
     animation-delay: 1s;
 }
+
 @keyframes shooting {
     0% {
         transform: translateY(-200px) rotate(-90deg);
         opacity: 1;
     }
-    100%{
+    100% {
         transform: translateY(600px) rotate(-90deg);
         opacity: 0;
     }
