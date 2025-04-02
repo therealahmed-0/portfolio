@@ -1,0 +1,16 @@
+name = "portfolio"
+compatibility_date = "2025-04-02"
+
+site = "./.svelte-kit/output/client"
+
+[build]
+command = "npm run build"
+upload.format = "modules"
+upload.dir = "./.svelte-kit/output"
+
+[dev]
+port = 8788
+local_protocol = "http"
+
+[env.production]
+route = "therealahmed.net/*"
