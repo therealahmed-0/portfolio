@@ -63,56 +63,75 @@
     box-shadow: 0 0 6px #fff;
 }
 
-.star:nth-child(odd) .span {
-    width: 120px;
-    height: 2px;
-    animation-duration: 1.5s;
+.star:nth-child(2)  {
+    right: 100px;
+}
+.star:nth-child(2) span{
+    animation-delay: 1s;
 }
 
-.star:nth-child(even) .span {
-    width: 160px;
-    height: 3px;
-    animation-duration: 2.5s;
+.star:nth-child(3)  {
+    right: 450px;
+}
+.star:nth-child(3) span{
+    animation-delay: 2s;
 }
 
-.star:nth-child(3n) .span {
-    width: 180px;
-    height: 2.5px;
-    animation-duration: 2s;
+.star:nth-child(4)  {
+    right: -150px;
+}
+.star:nth-child(4) span{
+    animation-delay: 3s;
 }
 
-.star:nth-child(4n) .span {
-    width: 140px;
-    height: 1.5px;
-    animation-duration: 3s;
+.star:nth-child(5)  {
+    right: -350px;
+}
+.star:nth-child(5) span{
+    animation-delay: 2s;
 }
 
-.span::before {
-    width: 6px;
-    height: 6px;
+.star:nth-child(6)  {
+    right: 550px;
+}
+.star:nth-child(6) span{
+    animation-delay: 4s;
 }
 
-.star:nth-child(1) { left: 90%; animation-delay: 0s; }
-.star:nth-child(2) { left: 70%; animation-delay: 1s; }
-.star:nth-child(3) { left: 50%; animation-delay: 2s; }
-.star:nth-child(4) { left: 30%; animation-delay: 1.5s; }
-.star:nth-child(5) { left: 10%; animation-delay: 0.5s; }
-.star:nth-child(6) { left: 80%; animation-delay: 2.5s; }
-.star:nth-child(7) { left: 60%; animation-delay: 3s; }
-.star:nth-child(8) { left: 40%; animation-delay: 1.2s; }
-.star:nth-child(9) { left: 20%; animation-delay: 2.8s; }
-.star:nth-child(10) { left: 5%; animation-delay: 3.5s; }
+.star:nth-child(7)  {
+    right: 50px;
+}
+.star:nth-child(7) span{
+    animation-delay: 4s;
+}
 
+.star:nth-child(8)  {
+    right: 750px;
+}
+.star:nth-child(8) span{
+    animation-delay: 5s;
+}
+
+.star:nth-child(9)  {
+    right: 250px;
+}
+.star:nth-child(9) span{
+    animation-delay: 4s;
+}
+
+.star:nth-child(10)  {
+    right: 100px;
+}
+.star:nth-child(10) span{
+    animation-delay: 1s;
+}
 @keyframes shooting {
     0% {
-        transform: translateY(-100px) translateX(0) rotate(-90deg) scale(1);
-        opacity: 0;
-    }
-    10% {
+        transform: translateY(-200px) rotate(-90deg);
         opacity: 1;
     }
     100%{
-        transform: translateY(800px) translateX(100px) rotate(-90deg) scale(1.2);
+        transform: translateY(600px) rotate(-90deg);
         opacity: 0;
     }
 }
