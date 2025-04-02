@@ -2,8 +2,29 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-*{
-    font-family: 'inter'
+@font-face {
+    font-family: 'Inter';
+    src: url('static/fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('static/fonts/Inter-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_24pt-Regular.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+body {
+    font-family: 'Inter', sans-serif;
 }
 html{
     scroll-behavior: smooth;
