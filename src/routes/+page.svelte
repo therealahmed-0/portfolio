@@ -1,7 +1,8 @@
 <script lang="ts">
-  import Navbar from "../lib/Navbar.svelte";
+  import Navbar from "$lib/Navbar.svelte";
   import { TypeWriter } from 'svelte-typewrite';
   import { autoHash } from '$lib/autoHash';
+  import Footer from "$lib/Footer.svelte"
 
   let quotes = [
       "The world doesn't care about your excuses. All that matters is the result.",
@@ -29,25 +30,175 @@
       selectedQuote = newQuote;
   }
 </script>
+<head>
+  <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.star{
+    position: absolute;
+    transform: rotateZ(45deg);
+    top: -50px;
+}
+
+.span {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to right, #fff, transparent);
+    filter: drop-shadow(0 0 6px #000);
+    animation: shooting linear infinite;
+    opacity: 0;
+}
+
+.span::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 6px #fff;
+}
+
+.star:nth-child(odd) .span {
+    width: 120px;
+    height: 2px;
+    animation-duration: 1.5s;
+}
+
+.star:nth-child(even) .span {
+    width: 160px;
+    height: 3px;
+    animation-duration: 2.5s;
+}
+
+.star:nth-child(3n) .span {
+    width: 180px;
+    height: 2.5px;
+    animation-duration: 2s;
+}
+
+.star:nth-child(4n) .span {
+    width: 140px;
+    height: 1.5px;
+    animation-duration: 3s;
+}
+
+.span::before {
+    width: 6px;
+    height: 6px;
+}
+
+.star:nth-child(1) { left: 90%; animation-delay: 0s; }
+.star:nth-child(2) { left: 70%; animation-delay: 1s; }
+.star:nth-child(3) { left: 50%; animation-delay: 2s; }
+.star:nth-child(4) { left: 30%; animation-delay: 1.5s; }
+.star:nth-child(5) { left: 10%; animation-delay: 0.5s; }
+.star:nth-child(6) { left: 80%; animation-delay: 2.5s; }
+.star:nth-child(7) { left: 60%; animation-delay: 3s; }
+.star:nth-child(8) { left: 40%; animation-delay: 1.2s; }
+.star:nth-child(9) { left: 20%; animation-delay: 2.8s; }
+.star:nth-child(10) { left: 5%; animation-delay: 3.5s; }
+
+@keyframes shooting {
+    0% {
+        transform: translateY(-100px) translateX(0) rotate(-90deg) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(800px) translateX(100px) rotate(-90deg) scale(1.2);
+        opacity: 0;
+    }
+}
+</style>
+</head>
 <div class="fixed top-0 left-0 w-full z-50">
   <Navbar fill={"#ff0000"}/>
 </div>
 
 <main>
-  <div use:autoHash class="flex flex-col h-screen justify-center items-center text-center">
-      <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
-          <TypeWriter 
-              texts={[`"${selectedQuote}"`]} 
-              ondeleteend={changeQuote}
-          />
-      </span>
-      <div class="p-5">
-          <span class="text-gray-600 text-[12px] md:text-[24px] lg:text-lg">
-              Scroll down to learn more
-          </span>
+  <div class="relative h-screen w-full overflow-hidden bg-gray-950">
+    <!-- Shooting stars container -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
+        <div class="star"><span class="span"></span></div>
       </div>
   </div>
+    <!-- Main content -->
+    <div class="flex flex-col h-screen justify-center items-center text-center relative z-10">
+        <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
+            <TypeWriter 
+                texts={[`"${selectedQuote}"`]} 
+                ondeleteend={changeQuote}
+            />
+        </span>
+        <div class="p-5">
+            <span class="text-gray-600 text-[12px] md:text-[24px] lg:text-lg">
+                Scroll down to learn more
+            </span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .star {
+        position: absolute;
+        transform: rotateZ(45deg);
+        top: -50px;
+    }
+
+    .star span {
+        display: block;
+        position: relative;
+        background-image: linear-gradient(to right, #fff, transparent);
+        filter: drop-shadow(0 0 6px #000);
+        animation: shooting 5s linear infinite;
+        opacity: 0;
+        width: 140px;
+        height: 2px;
+    }
+
+    .star span::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        border-radius: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 6px #fff;
+        width: 6px;
+        height: 6px;
+    }
+
+    @keyframes shooting {
+        0% {
+            transform: translateY(-100px) translateX(0) rotate(-90deg) scale(1);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(800px) translateX(100px) rotate(-90deg) scale(1.2);
+            opacity: 0;
+        }
+    }
+</style>
 
   <section id="About"  use:autoHash class="flex flex-col items-center justify-center h-screen pt-20 md:pt-28 lg:pt-34 px-6 md:px-12 text-center">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-zinc-700 text-transparent bg-clip-text">About Me</h1>
@@ -136,11 +287,5 @@
             </div>
           </a>
         </section>
-        <br>
-        <br>
-        <section>
-          <span>
-            todo: footer
-          </span>
-        </section>
 </main>
+<Footer />
