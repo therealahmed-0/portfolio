@@ -12,7 +12,7 @@
         <a href="#About" class="hover:text-zinc-400 transition">About Me</a>
         <a href="#Contact" class="hover:text-zinc-400 transition">Contact</a>
         <a href="#Projects" class="hover:text-zinc-400 transition">Projects</a>
-        <a href="/Donate" class="hover:text-red-500 transition font-semibold">Donate</a>
+        <a href="https://ko-fi.com/therealahmed0" class="hover:text-red-500 transition font-semibold">Donate</a>
     </nav>
 
     <!-- Social Links -->

@@ -14,7 +14,6 @@
 		"lint": "prettier --check ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-cloudflare": "^5.0.1",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.16",
@@ -31,6 +30,9 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@astrojs/cloudflare": "^12.4.0",
+		"@cloudflare/wrangler": "^1.21.0",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"svelte-typewrite": "^2.0.2"
 	}
 }
