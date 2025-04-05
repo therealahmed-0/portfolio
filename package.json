@@ -33,8 +33,6 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^12.4.0",
-		"@cloudflare/wrangler": "^1.21.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"svelte-typewrite": "^2.0.2"
 	}
