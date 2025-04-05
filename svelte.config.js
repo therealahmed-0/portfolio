@@ -1,9 +1,14 @@
 import adapter from '@sveltejs/adapter-static';
 
-export default {
-	kit: {
-		adapter: adapter({
-			fallback: 'app.html'
-		})
-	}
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: "app.html",
+    }),
+  },
 };
+
+export default config;
