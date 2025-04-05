@@ -3,6 +3,9 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"engines": {
+		"node": ">=18.19"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -34,8 +37,5 @@
 		"@cloudflare/wrangler": "^1.21.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"svelte-typewrite": "^2.0.2"
-	},
-	"engines": {
- 		"node": ">=18.19"
 	}
 }
