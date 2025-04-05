@@ -145,23 +145,21 @@
 </div>
 
 <main>
-  <div class="relative h-screen w-full overflow-hidden bg-gray-950">
-    <!-- Shooting stars container -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-        <div class="star"><span class="span"></span></div>
-      </div>
-  </div>
-    <!-- Main content -->
+  <div class="relative h-screen w-full bg-gray-950 overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+        <div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+            <div class="star"><span class="span"></span></div>
+        </div>
+    </div>
     <div class="flex flex-col h-screen justify-center items-center text-center relative z-10">
         <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
             <TypeWriter 
