@@ -11,7 +11,7 @@
       "If failure makes you stronger, then you can never lose.",
       "Discipline is not a punishment, it's a practice of self-control and mastery.",
       "Success comes to those who are willing to risk for it.",
-      "The amount of stress is the level of success you can enjoy.",
+      "The amount of stress you can endure is the level of success you can enjoy.",
       "Do the impossible, and you will never doubt yourself again.",
       "The only thing holding you back is your own mindset.",
       "You must put in the effort to live the life you want.",

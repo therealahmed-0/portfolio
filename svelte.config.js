@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import path from 'path';
 
 const config = {
   kit: {
@@ -7,8 +8,9 @@ const config = {
       assets: 'build',
       fallback: 'index.html',
     }),
-    prerender: {
-      enabled: true,
+    alias: {
+      $lib: path.resolve('src/lib'),
+      $app: path.resolve('.svelte-kit/app'),
     },
   },
 };
