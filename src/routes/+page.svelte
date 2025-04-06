@@ -280,10 +280,10 @@
     </div>
   </div>
   <div use:autoHash class="h-screen flex flex-col pt-22 md:pt-30 lg:pt-36 px-6 md:px-12 text-center">
-    <div class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-slate-800 text-transparent bg-clip-text">
+    <div id="Projects" class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-b from-white to-slate-800 text-transparent bg-clip-text">
         Projects
     </div>
-    <section id="Projects" class="flex flex-col md:flex-row justify-center items-center pt-12 md:pt-20 lg:pt-28 text-white gap-6">
+    <section class="flex flex-col md:flex-row justify-center items-center pt-12 md:pt-20 lg:pt-28 text-white gap-6">
         <a href="/RevisionBot#mainPage" class="w-full md:w-1/3">
             <div class="group p-6 border border-white/20 rounded-md hover:bg-white/10 ease-in-out duration-300">
                 <span class="group font-semibold text-xl md:text-2xl lg:text-4xl">
@@ -302,7 +302,7 @@
                     <span class="inline-block">→</span>
                 </span>
                 <p class="mt-3 text-sm md:text-base">
-                    A compact operating system for a smart water bottle with an integrated display, featuring real-time temperature monitoring and AI-powered interactions. Coming Soon.
+                    A compact operating system for a smart water bottle with an integrated display, featuring standby time displaying and AI-powered interactions. Coming Soon.
                 </p>
             </div>
           </a>
