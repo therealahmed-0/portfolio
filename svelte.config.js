@@ -4,12 +4,13 @@ const config = {
   kit: {
     adapter: adapter({
       pages: 'build',
-      assets: 'build'
+      assets: 'build',
+      fallback: 'index.html',
     }),
     prerender: {
-      default: true
-    }
-  }
+      enabled: true,
+    },
+  },
 };
 
 export default config;
