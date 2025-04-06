@@ -164,12 +164,13 @@
         </div>
     </div>
     <div class="flex flex-col h-screen justify-center items-center text-center relative z-10">
-        <span class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
+        <div class="bg-gradient-to-b from-red-500 to-red-900 bg-clip-text text-transparent text-xl md:text-2xl lg:text-5xl font-bold p-5">
             <TypeWriter 
                 texts={[`"${selectedQuote}"`]} 
                 ondeleteend={changeQuote}
             />
-        </span>
+        </div>
+        
         <div class="p-5">
             <span class="text-gray-600 text-[12px] md:text-[24px] lg:text-lg">
                 Scroll down to learn more
