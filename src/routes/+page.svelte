@@ -30,7 +30,7 @@
       selectedQuote = newQuote;
   }
 </script>
-<head>
+<svelte:head>
     <title>
         The Real Ahmed - Home
     </title>
@@ -142,7 +142,7 @@
     }
 }
 </style>
-</head>
+</svelte:head>
 <div class="fixed top-0 left-0 w-full z-50">
   <Navbar fill={"#ff0000"}/>
 </div>
