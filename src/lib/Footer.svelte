@@ -9,9 +9,9 @@
 
     <!-- Navigation Links -->
     <nav class="flex gap-6 mt-4 md:mt-0 text-sm md:text-md lg:text-lg">
-        <a href="#About" class="hover:text-zinc-400 transition">About Me</a>
-        <a href="#Contact" class="hover:text-zinc-400 transition">Contact</a>
-        <a href="#Projects" class="hover:text-zinc-400 transition">Projects</a>
+        <a href="/#About" class="hover:text-zinc-400 transition">About Me</a>
+        <a href="/#Contact" class="hover:text-zinc-400 transition">Contact</a>
+        <a href="/#Projects" class="hover:text-zinc-400 transition">Projects</a>
         <a href="https://ko-fi.com/therealahmed0" class="hover:text-red-500 transition font-semibold">Donate</a>
     </nav>
 
@@ -28,7 +28,7 @@
                 </svg>
         </a>
         <a href="mailto:ahmed@therealahmed.net" aria-label="mail">
-            <svg fill="currentColor" class="w-6 h-6 text-zinc-200" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+            <svg fill="currentColor" class="w-6 h-6 text-zinc-200 hover:text-zinc-400 transition" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"/>
             </svg>
         </a>
