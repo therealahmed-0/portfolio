@@ -31,6 +31,9 @@
   }
 </script>
 <head>
+    <title>
+        The Real Ahmed - Home
+    </title>
   <style>
 * {
     margin: 0;

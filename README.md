@@ -1,38 +1,39 @@
-# sv
+# therealahmed portfolio
+Hi, welcome to my portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+I'm Ahmed - a student, developer, and passionate learner building real-world tools with code and problem solving skills. This portfolio showcases my current and upcoming projects, with a focus on clean design and performance
 
-## Creating a project
+## About Me
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Experience:** 3 years in advanced JavaScript + Web Development; 1 year in basic C# Development; 1 month in basic Golang; 1 year in intermediate Python
+- **Interests:** Comp Sci, Physics, automation, problem solving, maths
+- **Strengths:** Deep focus, self-learning, discipline
+- **Goal:** To make real world solutions that can help people and reflects my technical abilities in programming and problem solving
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Key Projects
 
-# create a new project in my-app
-npx sv create my-app
-```
+### **Portfolio**
 
-## Developing
+This GitHub repo; I made it mainly as a learning project, to enhance my technical skills and to learn TailwindCSS and SvelteKit
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### **Revision Bot**
 
-```bash
-npm run dev
+A smart revision assistant designed to help students revise online, during conversations, to make revising online and in groups more fun.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- Uses NodeJS environment for fast execution
+- Uses the WWeb.JS library for integration with WhatsApp API
+- You can see the product page here: [https://therealahmed.net/RevisionBot]
 
-## Building
+### **BottleOS (In Progress)**
 
-To create a production version of your app:
+A basic Operating System designed to display the time in StandBy and use AI integration, designed for low-power, small devices, like the Raspberry Pi Zero 2 W
 
-```bash
-npm run build
-```
+- Written in low-level C / ASM
+- Will integrate ChatGPT or another AI model either locally, or through an API
+- Long-Term project focussed on creating from scratch, and developing drivers for fast function
 
-You can preview the production build with `npm run preview`.
+## Coming Soon
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- More automation tools
+- Mobile developments (most likely react native)
+- Windows and cross-platform applications

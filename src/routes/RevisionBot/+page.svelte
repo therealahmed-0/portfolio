@@ -2,6 +2,11 @@
     import RevisionNav from "$lib/RevisionNav.svelte";
     import Footer from "$lib/Footer.svelte";
 </script>
+<head>
+    <title>
+        Revision Bot
+    </title>
+</head>
 <div class="fixed top-0 left-0 w-full z-50">
     <RevisionNav fill={"#008000"}/>
   </div>
